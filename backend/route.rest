@@ -1,0 +1,29 @@
+GET http://localhost:3000/todos
+
+###
+
+GET http://localhost:3000/todos/630b0a71ae9843b8aa55d525
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+    "title": "task 2",
+    "bodyContext": "ssssssssssssssssssssssssssssss"
+}
+
+###
+GET http://localhost:3000/todos/
+
+###
+DELETE http://localhost:3000/todos/630b0a71ae9843b8aa55d525
+
+
+###
+PATCH http://localhost:3000/todos/630b0a81ae9843b8aa55d527
+Content-Type: application/json
+
+{
+    "title": "new name"
+}

@@ -1,0 +1,16 @@
+<main>
+  <div class="section__container container">
+    <h1 class="section__title">Notes</h1>
+    <ul class="list__container" *ngFor="let notes of notesList">
+      <app-notes-list
+        [notes]="notes"
+        #theClickNote
+        (click)="getClickData(theClickNote)"
+        [clickData]="clickData"
+      ></app-notes-list>
+    </ul>
+  </div>
+  <div class="section__container container">
+    <app-input-form [noteData]="clickData"></app-input-form>
+  </div>
+</main>

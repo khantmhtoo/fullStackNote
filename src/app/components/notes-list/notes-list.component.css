@@ -1,0 +1,16 @@
+.list__content {
+  margin-block: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  padding: 0.25rem 0.5rem;
+}
+button + button {
+  margin-left: 0.5rem;
+}

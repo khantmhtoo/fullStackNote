@@ -1,0 +1,28 @@
+button {
+  padding: 0.25rem;
+  min-width: 5rem;
+}
+button + button {
+  margin-left: 1rem;
+}
+.btn__container {
+  margin-top: 1.5rem;
+}
+form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.input__title {
+  padding: 0.5rem;
+}
+.input__description {
+  margin-top: 1.5rem;
+  resize: none;
+  padding: 0.5rem;
+}
+.err__msg {
+  color: red;
+  font-weight: bold;
+  font-size: 1.125rem;
+}

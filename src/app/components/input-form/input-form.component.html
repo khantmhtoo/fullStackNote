@@ -1,0 +1,36 @@
+<form [formGroup]="form">
+  <input
+    class="input__title"
+    type="text"
+    id="title"
+    formControlName="title"
+    placeholder="{{ noteData.title }}"
+  />
+  <div class="err__msg" *ngIf="title.invalid && (title.dirty || title.touched)">
+    <div *ngIf="title.errors?.['required']">Title is required.</div>
+  </div>
+
+  <textarea
+    class="input__description"
+    name="description"
+    id="description"
+    cols="30"
+    rows="10"
+    id="bodyContext"
+    formControlName="bodyContext"
+    placeholder="{{ noteData.bodyContext }}"
+  ></textarea>
+  <div
+    class="err__msg"
+    *ngIf="bodyContext.invalid && (bodyContext.dirty || bodyContext.touched)"
+  >
+    <div *ngIf="bodyContext.errors?.['required']">
+      Body Content is required.
+    </div>
+  </div>
+
+  <div class="btn__container">
+    <button (click)="onUpdate()">Update</button>
+    <button (click)="onSubmit()">Add</button>
+  </div>
+</form>
